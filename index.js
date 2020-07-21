@@ -80,6 +80,11 @@ function updateSteamGames(steamId, tab = "recent", length = 1000, proxy = false)
                 fs.mkdirsSync(path.join(__dirname, "/data/"));
             }
             let gameData = games.slice(0, length);
+            for(g in gameData){
+                if(! gameData[g]['hours_forever']){
+                    gameData[g]['hours_forever'] = '0'
+                }
+            }
             fs.writeFile(path.join(__dirname, "/data/games.json"), JSON.stringify(gameData), err => {
                 if (err) {
                     log.info("Failed to write data to games.json");
