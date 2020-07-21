@@ -198,3 +198,20 @@
 blockquote{
   display: none;
 }
+
+#steam-index-img{
+  margin-bottom: 5px;
+}
+
+#steam-index-link{
+  text-align:center;
+}
+
+#steam-index-link a{
+  color: #2089bc;
+  font-size: 14px;
+}
+
+#steam-index-link a:hover{
+  color: #5fb7ff;
+}
